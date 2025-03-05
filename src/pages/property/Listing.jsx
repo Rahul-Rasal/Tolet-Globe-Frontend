@@ -641,7 +641,7 @@ const Listing = () => {
                       searchResults.areas.length > 0) && (
                       <div
                         ref={searchPanelRef}
-                        className="absolute top-20 left-36 mt-2 w-1/4 bg-white rounded-lg shadow-lg z-50 ml-10 max-h-[300px] overflow-y-auto"
+                        className="absolute top-20 left-36 mt-2 w-1/4 bg-white rounded-lg shadow-lg z-50 ml-10   max-h-[300px] overflow-y-auto"
                       >
                         {[
                           ...searchResults.localities,
