@@ -109,7 +109,7 @@ const Filters = ({
 
   return (
     <>
-      <div className="w-fit  bg-white p-0 sm:p-2 -ml-28 -mt-4 shadow-sm rounded-xl">
+      <div className="w-[670px]  bg-white p-0 sm:p-2 -ml-[15px]  -mt-4 shadow-sm rounded-xl">
         <div className="flex sm:gap-6 ">
           {[
             { icon: BsHouseDoor, text: "HOUSES" },
@@ -121,7 +121,7 @@ const Filters = ({
           ].map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center w-[67px] sm:w-[100px] cursor-pointer text-black hover:text-white hover:bg-[#c8a018] rounded-xl py-3"
+              className="flex flex-col items-center w-[110px] sm:w-[100px] cursor-pointer text-black hover:text-white hover:bg-[#c8a018] rounded-xl  py-1"
               onClick={() => handleCategoryClick(item.text)}
             >
               <item.icon size={24} className="mb-2" />
@@ -134,11 +134,13 @@ const Filters = ({
       </div>
 
       {selectedCategory === "HOUSES" && (
-        <div className="w-fit bg-white p-2 m-1 shadow-md sm:ml-4 rounded-xl">
-          <div className="flex flex-col gap-6">
+        <div className="w-fit bg-white p-[20px] m-1 shadow-md sm:-ml-4 rounded-xl">
+          <div className="flex flex-col gap-10">
             <div className="flex flex-col">
-              <h3 className="text-left font-medium mb-3 text-black">BHK</h3>
-              <div className="flex flex-row gap-6">
+              <h3 className="text-left font-medium mb-8 text-black text-2xl">
+                BHK
+              </h3>
+              <div className="flex flex-row gap-12">
                 {["+ 1 BHK", "+ 2 BHK", "+ 3 BHK", "+ 4 BHK", "+ 5 BHK"].map(
                   (bhk) => (
                     <label
@@ -153,7 +155,7 @@ const Filters = ({
                         onChange={() => handleFilterChange("bhk", bhk)}
                         className="appearance-none w-4 h-4 rounded-full border-2 border-black checked:bg-black checked:border-[#4A7F79] checked:border-4 transition-all"
                       />
-                      <span className="text-sm text-black overflow-hidden whitespace-nowrap text-ellipsis">
+                      <span className="text-lg text-black overflow-hidden whitespace-nowrap text-ellipsis">
                         {bhk}
                       </span>
                     </label>
@@ -162,11 +164,11 @@ const Filters = ({
               </div>
             </div>
 
-            <div className="flex flex-col ">
-              <h3 className="text-left font-medium mb-3 text-black">
+            <div className="flex flex-col">
+              <h3 className="text-left font-medium mb-8 text-black text-2xl">
                 House Type
               </h3>
-              <div className="flex flex-row gap-4">
+              <div className="flex flex-row gap-6">
                 {["Fully Furnished", "Semi Furnished", "Not Furnished"].map(
                   (type) => (
                     <label
@@ -181,7 +183,7 @@ const Filters = ({
                         onChange={() => handleFilterChange("houseType", type)}
                         className="appearance-none w-4 h-4 rounded-full border-2 border-black checked:bg-black checked:border-[#4A7F79] checked:border-4 transition-all"
                       />
-                      <span className="text-sm text-black">{type}</span>
+                      <span className="text-lg text-black">{type}</span>
                     </label>
                   )
                 )}
@@ -189,10 +191,10 @@ const Filters = ({
             </div>
 
             <div className="flex flex-col">
-              <h3 className="text-left font-medium mb-3 text-black">
+              <h3 className="text-left font-medium mb-8 text-black text-2xl">
                 Preference
               </h3>
-              <div className="flex flex-row  gap-4">
+              <div className="flex flex-row gap-6">
                 {["Family", "Bachelors"].map((preference) => (
                   <label
                     key={preference}
@@ -208,7 +210,7 @@ const Filters = ({
                       }
                       className="appearance-none w-4 h-4 rounded-full border-2 border-black checked:bg-black checked:border-[#4A7F79] checked:border-4 transition-all"
                     />
-                    <span className="text-sm text-black">{preference}</span>
+                    <span className="text-lg text-black">{preference}</span>
                   </label>
                 ))}
               </div>
@@ -233,11 +235,13 @@ const Filters = ({
       )}
 
       {selectedCategory === "FLATS" && (
-        <div className="w-fit bg-white p-2 shadow-md m-1 sm:ml-4 rounded-xl">
-          <div className="flex flex-col gap-6">
+        <div className="w-fit bg-white p-[20px] m-1  shadow-md sm:-ml-4 rounded-xl">
+          <div className="flex flex-col gap-10">
             <div className="flex flex-col">
-              <h3 className="text-left font-medium mb-3 text-black">BHK</h3>
-              <div className="flex flex-row gap-6">
+              <h3 className="text-left font-medium mb-8 text-black text-2xl">
+                BHK
+              </h3>
+              <div className="flex flex-row gap-12">
                 {["+ 1 BHK", "+ 2 BHK", "+ 3 BHK", "+ 4 BHK", "+ 5 BHK"].map(
                   (bhk) => (
                     <label
@@ -252,7 +256,7 @@ const Filters = ({
                         onChange={() => handleFilterChange("bhk", bhk)}
                         className="appearance-none w-4 h-4 rounded-full border-2 border-black checked:bg-black checked:border-[#4A7F79] checked:border-4 transition-all"
                       />
-                      <span className="text-sm text-black overflow-hidden whitespace-nowrap text-ellipsis">
+                      <span className="text-lg text-black overflow-hidden whitespace-nowrap text-ellipsis">
                         {bhk}
                       </span>
                     </label>
@@ -262,10 +266,10 @@ const Filters = ({
             </div>
 
             <div className="flex flex-col">
-              <h3 className="text-left font-medium mb-3 text-black">
-                Flats Type
+              <h3 className="text-left font-medium mb-8 text-black text-2xl">
+                House Type
               </h3>
-              <div className="flex flex-row gap-4">
+              <div className="flex flex-row gap-6">
                 {["Fully Furnished", "Semi Furnished", "Not Furnished"].map(
                   (type) => (
                     <label
@@ -280,7 +284,7 @@ const Filters = ({
                         onChange={() => handleFilterChange("houseType", type)}
                         className="appearance-none w-4 h-4 rounded-full border-2 border-black checked:bg-black checked:border-[#4A7F79] checked:border-4 transition-all"
                       />
-                      <span className="text-sm text-black">{type}</span>
+                      <span className="text-lg text-black">{type}</span>
                     </label>
                   )
                 )}
@@ -288,10 +292,10 @@ const Filters = ({
             </div>
 
             <div className="flex flex-col">
-              <h3 className="text-left font-medium mb-3 text-black">
+              <h3 className="text-left font-medium mb-8 text-black text-2xl">
                 Preference
               </h3>
-              <div className="flex flex-row gap-4">
+              <div className="flex flex-row gap-6">
                 {["Family", "Bachelors"].map((preference) => (
                   <label
                     key={preference}
@@ -307,7 +311,7 @@ const Filters = ({
                       }
                       className="appearance-none w-4 h-4 rounded-full border-2 border-black checked:bg-black checked:border-[#4A7F79] checked:border-4 transition-all"
                     />
-                    <span className="text-sm text-black">{preference}</span>
+                    <span className="text-lg text-black">{preference}</span>
                   </label>
                 ))}
               </div>
@@ -332,13 +336,13 @@ const Filters = ({
       )}
 
       {selectedCategory === "PAYING GUESTS" && (
-        <div className="w-fit bg-white p-4 shadow-md ml-4 rounded-xl">
-          <div className="flex flex-col gap-6">
+        <div className="w-[670px] bg-white p-4 pt-3 mt-1 -ml-4 shadow-md ml-4 rounded-xl">
+          <div className="flex flex-col gap-2">
             <div className="flex flex-col">
-              <h3 className="text-left font-medium mb-3 text-black">
+              <h3 className="text-left font-medium mb-8 text-black text-2xl">
                 Preference
               </h3>
-              <div className="flex flex-row gap-4">
+              <div className="flex flex-row gap-6">
                 {["Girls", "Boys"].map((gender) => (
                   <label
                     key={gender}
@@ -354,13 +358,13 @@ const Filters = ({
                       }
                       className="appearance-none w-4 h-4 rounded-full border-2 border-black checked:bg-black checked:border-[#4A7F79] checked:border-4 transition-all"
                     />
-                    <span className="text-sm text-black">{gender}</span>
+                    <span className="text-lg text-black">{gender}</span>
                   </label>
                 ))}
               </div>
             </div>
 
-            <div className="flex justify-end gap-4 mt-2">
+            <div className="flex justify-end gap-4 mt-4">
               <button
                 onClick={resetFilters}
                 className="px-4 py-2 text-blue-600 hover:text-blue-800 font-medium"
