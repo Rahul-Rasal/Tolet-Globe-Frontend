@@ -500,11 +500,14 @@ const Listing = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 text-sm md:text-lg">
             {/* Search bar section - spans 8 columns on larger screens */}
-            <div className="bg-white sm:col-span-8 md:col-span-6 rounded-md w-full">
+            <div
+              className="bg-white sm:col-span-12 ml-3  rounded-md w-full"
+              style={{ width: "57%" }}
+            >
               <div className="flex flex-wrap items-center text-black  text-sm md:text-lg">
                 {/* Location Logic */}
                 <div
-                  className="flex items-center gap-4 px-3 py-2 my-1  shrink-0 border-r border-black"
+                  className="flex items-center gap-4 px-5 py-2 my-1  shrink-0 border-r border-black"
                   onClick={handleLocation}
                 >
                   <div className="py-1 px-1 hover:cursor-pointer">
@@ -530,7 +533,7 @@ const Listing = () => {
                 </div>
 
                 {/* Search Input */}
-                <div className="flex-1 min-w-0 flex items-center gap-2 px-4 my-1 text-sm md:text-lg">
+                <div className="bg-white flex-1 min-w-0 flex items-center gap-2  pl-9 my-1 text-sm md:text-lg">
                   <FaSearch className="text-black shrink-0" />
                   <div className="flex flex-wrap items-center gap-1 py-2 w-full overflow-x-hidden">
                     {selectedLocality && (
@@ -638,7 +641,7 @@ const Listing = () => {
                       searchResults.areas.length > 0) && (
                       <div
                         ref={searchPanelRef}
-                        className="absolute top-20 left-36 mt-2 w-1/4 bg-white rounded-lg shadow-lg z-50 max-h-[300px] overflow-y-auto"
+                        className="absolute top-20 left-36 mt-2 w-1/4 bg-white rounded-lg shadow-lg z-50 ml-10 max-h-[300px] overflow-y-auto"
                       >
                         {[
                           ...searchResults.localities,
@@ -672,7 +675,7 @@ const Listing = () => {
 
                 {/* Filters logic */}
                 <div
-                  className="flex items-center gap-2 border-l px-3 border-black shrink-0 cursor-pointer"
+                  className="flex items-center gap-2 border-l px-3 border-black shrink-0 cursor-pointer h-[50px]"
                   onClick={handleOpen}
                 >
                   <div className="flex items-center gap-2">
@@ -685,7 +688,7 @@ const Listing = () => {
 
                 {/* SORT LOGIC */}
                 <div
-                  className="flex items-center gap-2 border-l pl-3 border-black shrink-0 cursor-pointer"
+                  className=" flex items-center gap-2 border-l pl-12 pr-12 border-black shrink-0 cursor-pointer h-[50px]"
                   onClick={handleMode}
                 >
                   <span className="text-sm md:text-lg whitespace-nowrap">
@@ -698,14 +701,14 @@ const Listing = () => {
                       mode ? "rotate-180" : "rotate-0"
                     } cursor-pointer`}
                   />
-                  <div className="relative text-sm lg:text-lg">
+                  <div className="relative text-sm  lg:text-lg">
                     <div
                       className={`${
                         mode ? "block" : "hidden"
-                      } z-50 absolute bg-white shadow-lg rounded-lg text-center w-40 py-3 top-[30px] left-[-150px] sm:top-[36px] sm:left-[-110px]`}
+                      } z-50 absolute bg-white shadow-lg rounded-lg text-center w-[155px]  py-3 top-[30px] left-[-150px] sm:top-[36px] sm:left-[-105px]`}
                     >
                       <p
-                        className="border-b-2 py-2 font-medium cursor-pointer hover:bg-gray-100"
+                        className="border-b-2 py-2 text-[17px] font-semibold cursor-pointer hover:bg-gray-100"
                         onClick={() => {
                           handleSortClick("price-low-high"), setMode(false);
                         }}
@@ -713,7 +716,7 @@ const Listing = () => {
                         Price: Low to High
                       </p>
                       <p
-                        className="border-b-2 py-2 font-medium cursor-pointer hover:bg-gray-100"
+                        className="border-b-2 py-2 text-[17px] font-semibold cursor-pointer hover:bg-gray-100"
                         onClick={() => {
                           handleSortClick("price-high-low"), setMode(false);
                         }}
@@ -721,7 +724,7 @@ const Listing = () => {
                         Price: High to Low
                       </p>
                       <p
-                        className="py-2 font-medium cursor-pointer hover:bg-gray-100"
+                        className="py-2 text-[17px] font-semibold cursor-pointer hover:bg-gray-100"
                         onClick={() => {
                           handleSortClick("most-trending"), setMode(false);
                         }}
@@ -729,7 +732,7 @@ const Listing = () => {
                         Most Trending
                       </p>
                       <p
-                        className="py-2 font-medium cursor-pointer hover:bg-gray-100"
+                        className="py-2 text-[17px] font-semibold cursor-pointer hover:bg-gray-100"
                         onClick={() => {
                           handleSortClick("date-uploaded"), setMode(false);
                         }}
